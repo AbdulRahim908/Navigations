@@ -17,7 +17,7 @@ import Details from './pages/Details';
 
 export type RootStackParamList = {
   Home: undefined;
-  Details:{productID:String};
+  Details:{product:Product};
 };
 
 
@@ -25,7 +25,7 @@ export type RootStackParamList = {
 
 const Stack=createNativeStackNavigator<RootStackParamList>();
 
-function App():JSX.Element{
+const App=()=>{
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
